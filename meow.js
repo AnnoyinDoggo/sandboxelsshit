@@ -13,4 +13,4 @@ elements.heatsink = {
     state: "solid"
 };
 
-elementsManager.add("heatsink", elements.heatsink);
+addElement("heatsink", elements.heatsink);
