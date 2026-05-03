@@ -12,3 +12,5 @@ elements.heatsink = {
     insulate: true,
     state: "solid"
 };
+
+elementsManager.add("heatsink", elements.heatsink);
