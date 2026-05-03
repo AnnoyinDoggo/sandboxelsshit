@@ -1,11 +1,13 @@
-elements.invincible_cooler = {
-    color: "#a0e0ff",
-    behavior: behaviors.WALL,
-    category: "solids",
-    temp: 20,
-    insulate: true,
-    hardness: 1,
-    tick: function(pixel) {
-        pixel.temp = 20; 
-    }
+elements.heatsink = {
+	color: "#0000ff",
+	tick: function(pixel) {
+		if (pixel.temp < -258) {
+			pixel.temp = -273;
+		} else {
+			pixel.temp -= 15;
+		}
+	},
+	category: "land",
+	insulate: true,
+	state: "solid"
 };
